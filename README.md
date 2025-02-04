@@ -12,6 +12,16 @@ automatically.
 
 This addon helps disable autoplay in the webview.
 
+## Getting started
+
+Install the addon from [AnkiWeb](https://ankiweb.net/shared/info/525094096)
+or [GitHub releases](https://github.com/whatasame/anki-disable-autoplay-in-webview/releases) locally.
+
+By default, autoplay is disabled. If you want to enable autoplay again or specific webview, you can do so in the addon
+settings.
+
+Go to **Tools > Disable autoplay in webview**
+
 ## Troubleshooting
 
 If you encounter any issues, please create an issue
