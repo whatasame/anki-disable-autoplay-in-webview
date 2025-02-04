@@ -1,13 +1,15 @@
-from aqt import gui_hooks
-from aqt.browser import Browser
+from aqt import mw
+
+from .hooks import update_gui_hooks
+from .preference import preference_menu
 
 
-def on_editor_web_view_init(editor_web_view):
-    editor_web_view.setPlaybackRequiresGesture(True)
+def run():
+    config = mw.addonManager.getConfig(__name__)
 
-def set_browser_webview_gesture(browser: Browser):
-    browser.editor.web.setPlaybackRequiresGesture(True)
+    update_gui_hooks(config)
 
-gui_hooks.editor_web_view_did_init.append(on_editor_web_view_init)
-gui_hooks.browser_will_show.append(set_browser_webview_gesture)
+    preference_menu()
 
+
+run()
